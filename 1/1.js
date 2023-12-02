@@ -10,17 +10,17 @@ const main = () => {
 
     for (let char of line) {
       if (!isNaN(char)) {
-        firstNumber = char;
+        lastNumber = char;
       }
     }
 
     for (let char of line.split('').reverse().join('')) {
       if (!isNaN(char)) {
-        lastNumber = char;
+        firstNumber = char;
       }
     }
 
-    result += parseFloat(`${lastNumber}${firstNumber}`, 10);
+    result += parseFloat(`${firstNumber}${lastNumber}`, 10);
   });
 
   return result;
